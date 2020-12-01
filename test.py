@@ -1,4 +1,4 @@
-fs = 23.980408163265306
-if type(fs) == float:
-  fs = int(fs) + 1
-  print(fs)
+li1 = [1, 2, 3]
+li2 = [4, 5, 6]
+s = li1 * li2
+print(s)

@@ -10,7 +10,7 @@ import librosa.display
 
 if __name__ == "__main__":
   WAV_FILE = '01_Track/bass.wav'
-  y, sr = librosa.load(WAV_FILE)
+  y, sr = librosa.load(WAV_FILE) #y:時系列における波のデータ sr:一秒間のサンプル数
   S = np.abs(librosa.stft(y))
 
   plt.figure(figsize=(10, 4))
