@@ -13,11 +13,12 @@ y, sr = librosa.load(audio_path, sr=4096)
 
 # 波形の表示
 mpl_collection = librosa.display.waveplot(y, sr=sr)
-mpl_collection.axes.set(title="音声波形", ylabel="波形の振幅")
+mpl_collection.axes.set(title="music_wave", ylabel="sinpuku")
 # plt.show()
 
+# Hz推定
 D = librosa.stft(y)
 S, phase = librosa.magphase(D)
 Sdb = librosa.amplitude_to_db(S)
-librosa.display.specshow(Sdb, sr=sr, x_axis='time', y_axis='log')
+librosa.display.specshow(Sdb, sr=sr, x_axis="time", y_axis="log")
 plt.show()
