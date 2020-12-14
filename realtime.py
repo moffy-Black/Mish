@@ -13,16 +13,16 @@ import librosa
 
 if __name__ == "__main__":
     FORMAT = pyaudio.paInt16
-    CHANNELS = 1
+    CHANNELS = 1  # モノラル
     CHUNK = 2 ** 11
     RATE = 22050  # サンプリングレート
     FRAME_NUM = 218
     N_MELS = 80
 
-    p = pyaudio.PyAudio()
+    # p = pyaudio.PyAudio()
 
     audio = pyaudio.PyAudio()
-    print(audio.get_device_count())
+    # print(audio.get_device_count())
     stream = audio.open(
         format=FORMAT,
         channels=CHANNELS,
